@@ -1,0 +1,618 @@
+html {
+  scroll-behavior: smooth;
+  /* Adjust 100px to match the actual height of your navbar */
+  scroll-padding-top: 100px; 
+}
+
+/* Alternatively, add margin to the specific section */
+#home {
+  scroll-margin-top: 100px;
+}
+
+
+/* Base Styles */
+body {
+  background-color: #FF9A86;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navbar Layout */
+.navbar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keeps it above the gallery and hero */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center;
+  background-color: #FFB399;
+  border-radius: 20px;
+  padding: 20px 45px;
+}
+
+/*LOGO LIST*/
+.logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: zoomIn 0.5s;
+}
+
+.logo-button {
+  display: flex;
+  justify-content: flex-start;
+  
+  border-radius: 50%;
+  transition: all 0.3s;
+  
+  text-decoration: none;
+}
+
+.logo-button:hover {
+  transform: scale(1.5); /* Makes it pop when hovered */
+}
+
+p{
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+/* Menu Items */
+.menu-items-wrapper {
+  display: flex;
+  list-style: none; /*Removes default list styling */
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures buttons don't go off-screen */
+  justify-content: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem; /* Adjusted for better readability */
+}
+
+.menu-item {
+  font-size: clamp(14px, 1.5vw, 18px); /* Responsive font size */
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer; 
+}
+
+.menu-item:hover a{
+  color: white;
+}
+
+.menu-item:hover {
+  background-color: #BF5656;
+  transform: scale(1.05);
+}
+
+.menu-item-bottom a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* Adjusted for better readability */
+}
+
+.menu-item-bottom:hover a{
+  color: purple;
+}
+
+.link-email a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* Adjusted for better readability */
+}
+
+.link-email:hover a{
+  color: purple;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 55px 20px;
+} 
+
+.hero-title {
+  font-family: "Irish Grover", system-ui;
+  color: purple;
+  font-size: clamp(50px, 10vw, 100px); /* Responsive sizing */
+  margin: 20px 0;
+}
+
+/* Get Started Button */
+.GetStartedButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.GetStartedButton a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.get-started {
+  background-color: #FFB399;
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.get-started:hover {
+  background-color: #BF5656;
+  color: white;
+  transform: scale(1.05);
+}    
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 15px;
+  margin: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  width: calc(25.222% - 25px); /* 3 items per row with 15px gap */
+  height: auto;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 80%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 40px; 
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: clamp(36px, 5vw, 48px);
+  font-family: "Irish Grover", system-ui;
+  color: #FF9A86;
+  margin: 20px 0;
+}
+
+.about-text {
+  margin-top: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.8;
+  color: #333;
+  margin: 25px 0;
+}
+
+.about-slogan {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF9A86;
+}
+
+.about-slogan1{
+  background: #FF9A86;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.about-image {
+  position: relative;
+  border-radius: 10px;
+  width: calc(40% - 20px);
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-image:hover {
+  transform: scale(1.1);
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    background: #111;
+    color: white;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* SOCIAL */
+
+.social-icons span {
+    display: inline-block;
+    background: #222;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* CTA */
+
+.cta-section {
+    background: #FFB399;
+    color: black;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.cta-button {
+    background: #FF9A86;
+    color: #000;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cta-button:hover {
+    background: #BF5656;
+    color: white;
+    transform: scale(1.05);
+}
+
+.cta-title {
+    font-size: clamp(36px, 5vw, 48px);
+    font-family: "Irish Grover", system-ui;
+    color: purple;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #000;
+    color: #ccc;
+    padding: 100px 20px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* FEEDBACK SECTION */
+
+.feedback-section {
+  background: #FF9A86;
+  padding: 60px 40px;
+  margin-bottom: 40px; /* space bago About Us */
+}
+
+.feedback-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: black;
+  font-family: sans-serif;
+}
+
+.feedback-title span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.feedback-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feedback-card {
+  background: white;
+  padding: 30px;             
+  border-radius: 15px;        
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  min-height: 220px;          
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feedback-container {
+  gap: 35px;
+}
+
+.feedback-card:hover {
+  transform: scale(1.03);
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.feedback-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.feedback-section {
+  padding: 120px 40px 60px;
+}
+
+/* FOR Order Now Page */
+
+h2 {
+  font-family: "Irish Grover", system-ui;
+  font-size: clamp(40px, 10vw, 60px); /* Responsive sizing */
+  color: purple;
+  margin: 20px 0;
+}
+
+p.subtitle {
+  font-family: "Irish Grover", system-ui;
+  font-size: clamp(16px, 3vw, 20px); /* Responsive sizing */
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Container and Heading */
+.services-container {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #FF9A86;
+}
+
+/* The Grid Layout */
+.services-grid {
+    display: grid;
+    /* This creates 3 equal columns. '1fr' means 1 fraction of the space */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Space between cards */
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* The Individual Card */
+.service-card {
+    background: #FFB399;
+    border-radius: 15px;
+    overflow: hidden; /* Ensures the top gradient follows the border-radius */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.header-image { 
+    height: 150px;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.header-image:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content Area */
+.card-body {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Check Out Button */
+.check-out-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #BF5656;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.check-out-btn:hover {
+    background-color: #BF5656;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Mobile Layout */
+
+/* Navigation */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .menu-items-wrapper {
+        margin-top: 15px;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .menu-item {
+        padding: 8px 12px; /* Smaller padding for mobile */
+    }
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    /* On mobile */
+    width: 100%; 
+    max-width: 350px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .gallery-item {
+        width: calc(33.33% - 40px);
+    }
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default (mobile) */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.about-image {
+    width: 90%; /* Larger on mobile */
+    max-width: 400px;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row; /* Side-by-side on desktop */
+        text-align: left;
+    }
+    .about-image {
+        width: 40%;
+    }
+}
+
+/* Feedback Section */
+.feedback-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .feedback-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+}
+
+/* Footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack all columns on mobile */
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+        text-align: left;
+    }
+}
+
+/* Order Now */
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column for small phones */
+        padding: 0 10px;
+    }
+    
+    .hero-title {
+        font-size: 60px; /* Prevent title from breaking lines too aggressively */
+    }
+}
